@@ -10,17 +10,25 @@ const isAuthenticated = (req, res, next) => {
     res.redirect('/sessions/new')
   }
 }
+//// PRESENTATION ROUTES
 
+// INDEX
+logs.get('/', (req, res) => {
+  res.render('logs/index.ejs')
+})
+// NEW
 
+// SHOW
 
+// EDIT
 
+//// FUNCTIONAL ROUTES
 
+// CREATE
 
+// UPDATE
 
-
-
-
-
+// DELETE
 
 
 

@@ -65,7 +65,7 @@ app.use('/users', userController)
 //___________________
 //localhost:3000
 app.get('/' , (req, res) => {
-  res.send('Hello World!');
+  res.redirect('/logs')
 });
 //___________________
 //Listener
