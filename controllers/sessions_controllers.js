@@ -30,3 +30,5 @@ sessions.delete('/', (req, res) => {
     res.redirect('/')
   })
 })
+
+module.exports = sessions

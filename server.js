@@ -46,6 +46,20 @@ mongoose.connect(MONGODB_URI ,  { useNewUrlParser: true, useUnifiedTopology: tru
 //use public folder for static assets
 app.use(express.static('public'));
 app.use(express.json());// returns middleware that only parses JSON - may or may not need it depending on your project
+
+//___________________
+// Controllers
+//___________________
+
+
+
+
+
+
+
+
+
+
 //___________________
 // Routes
 //___________________
