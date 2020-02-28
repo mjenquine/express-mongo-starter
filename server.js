@@ -8,7 +8,7 @@ const session = require('express-session')
 //___________________
 //Configuration
 //___________________
-require('dotenv')
+require('dotenv').config()
 const app = express ();
 const db = mongoose.connection;
 //___________________
