@@ -51,14 +51,14 @@ app.use(express.json());// returns middleware that only parses JSON - may or may
 // Controllers
 //___________________
 
+const logsController = require('./controllers/logs_controllers.js')
+app.use('/logs', logsController)
 
+const sessionsController = require('./controllers/sessions_controllers.js')
+app.use('/sessions', sessionsController)
 
-
-
-
-
-
-
+const userController = require('./controllers/users_controllers.js')
+app.use('/users', userController)
 
 //___________________
 // Routes
