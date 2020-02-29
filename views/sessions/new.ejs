@@ -3,4 +3,42 @@
   <body>
     <%# nav partial %>
     <%- include ('../partials/nav.ejs') %>
+    <h4 class="title is-4">Sign In</h4>
+    <form class="" action="/sessions" method="POST">
+
+      <div class="field">
+        <label class="label">Username</label>
+        <div class="control has-icons-left has-icons-right">
+          <input class="input" type="text" placeholder="Username" name="username" required>
+          <span class="icon is-small is-left">
+            <i class="fas fa-user"></i>
+          </span>
+          <span class="icon is-small is-right">
+            <i class="fas fa-check"></i>
+          </span>
+        </div>
+      </div>
+
+      <div class="field">
+        <p class="control has-icons-left">
+          <input class="input" type="password" placeholder="Password" name="password">
+          <span class="icon is-small is-left">
+            <i class="fas fa-lock"></i>
+          </span>
+        </p>
+      </div>
+
+      <div class="field">
+        <div class="control">
+          <input class="button is-link" type="submit" value="Submit">
+        </div>
+      </div>
+
+    </form>
+
+
+
+
+
+    <%- include ('../partials/footer.ejs') %>
   </body>

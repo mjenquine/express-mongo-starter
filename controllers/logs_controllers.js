@@ -14,7 +14,11 @@ const isAuthenticated = (req, res, next) => {
 
 // INDEX
 logs.get('/', (req, res) => {
-  res.render('logs/index.ejs')
+  Log.find({}, (error, allLogs) => {
+    res.render('logs/index.ejs', {
+      logs: allLogs, currentUser: req.session.currentUser
+    })
+  })
 })
 // NEW
 
