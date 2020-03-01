@@ -21,7 +21,9 @@ logs.get('/', (req, res) => {
   })
 })
 // NEW
-
+logs.get('/new', (req, res) => {
+  res.render('logs/new.ejs', {currentUser: req.session.currentUser})
+})
 // SHOW
 
 // EDIT

@@ -4,10 +4,57 @@
     <%# nav partial %>
     <%- include ('../partials/nav.ejs') %>
 
+    <div class="container">
+
+
+      <form action="/logs" method="POST">
+        <div class="field">
+          <label class="label">Book Title</label>
+          <div class="control has-icons-left">
+            <input class="input" type="text" placeholder="Oh The Places You'll Go" name="title">
+            <span class="icon is-small is-left">
+              <i class="fas fa-book"></i>
+            </span>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Reader Name </label>
+          <div class="control has-icons-left">
+            <input class="input" type="text" placeholder="Jane Smith" name="readerName">
+            <span class="icon is-small is-left">
+              <i class="fas fa-user"></i>
+            </span>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Pages Read</label>
+          <div class="control has-icons-left">
+            <input class="input" type="text" placeholder="pages 17 - 23" name="pagesRead">
+            <span class="icon is-small is-left">
+              <i class="fas fa-hashtag"></i>
+            </span>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Character Name</label>
+          <div class="control has-icons-left">
+            <input class="input" type="text" placeholder="Sherlock Holmes" name="characterName">
+            <span class="icon is-small is-left">
+              <i class="fas fa-user-secret"></i>
+            </span>
+          </div>
+        </div>
 
 
 
 
 
+
+
+      </form>
+    </div>
     <%- include ('../partials/footer.ejs') %>
   </body>
