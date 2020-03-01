@@ -18,23 +18,24 @@
           </div>
         </div>
 
-        <div class="field">
-          <label class="label">Reader Name </label>
-          <div class="control has-icons-left">
-            <input class="input" type="text" placeholder="Jane Smith" name="readerName">
-            <span class="icon is-small is-left">
-              <i class="fas fa-user"></i>
-            </span>
+        <div class="field columns">
+          <div class="column is-half">
+            <label class="label">Reader Name </label>
+            <div class="control has-icons-left">
+              <input class="input" type="text" placeholder="Jane Smith" name="readerName">
+              <span class="icon is-small is-left">
+                <i class="fas fa-user"></i>
+              </span>
+            </div>
           </div>
-        </div>
-
-        <div class="field">
-          <label class="label">Pages Read</label>
-          <div class="control has-icons-left">
-            <input class="input" type="text" placeholder="pages 17 - 23" name="pagesRead">
-            <span class="icon is-small is-left">
-              <i class="fas fa-hashtag"></i>
-            </span>
+          <div class="column is-half">
+            <label class="label">Pages Read</label>
+            <div class="control has-icons-left">
+              <input class="input" type="text" placeholder="pages 17 - 23" name="pagesRead">
+              <span class="icon is-small is-left">
+                <i class="fas fa-hashtag"></i>
+              </span>
+            </div>
           </div>
         </div>
 
@@ -48,12 +49,90 @@
           </div>
         </div>
 
+        <label class="label">How is the Character Feeling in These Pages</label>
+        <div class="field columns">
+          <div class="column is-2">
+            <label class="radio"><i class="far fa-smile fa-3x"></i>
+              <input type="radio" name="isHappy">
+            </label>
+          </div>
+          <div class="column is-2">
+            <label class="radio"><i class="far fa-frown fa-3x"></i>
+              <input type="radio" name="isSad">
+            </label>
+          </div>
+          <div class="column is-2">
+            <label class="radio"><i class="far fa-angry fa-3x"></i>
+              <input type="radio" name="isMad">
+            </label>
+          </div>
+          <div class="column is-2">
+            <label class="radio"><i class="far fa-grin-tongue-wink fa-3x"></i>
+              <input type="radio" name="isFunny">
+            </label>
+          </div>
+          <div class="column is-2">
+            <label class="radio"><i class="far fa-grin-hearts fa-3x"></i>
+              <input type="radio" name="isLove">
+            </label>
+          </div>
+          <div class="column is-2">
+            <label class="radio"><i class="far fa-surprise fa-3x"></i>
+              <input type="radio" name="isSuprise">
+            </label>
+          </div>
+        </div>
 
+        <div class="field">
+          <label class="label">What matters most to the character?</label>
+          <div class="control">
+            <textarea class="textarea" placeholder="Answer here" name="questionOne"></textarea>
+          </div>
+        </div>
 
+        <div class="field">
+          <label class="label">What lesson does the character learn?</label>
+          <div class="control">
+            <textarea class="textarea" placeholder="Answer here" name="questionTwo"></textarea>
+          </div>
+        </div>
 
+        <div class="field">
+          <label class="label">What affect is the character having on those around them?</label>
+          <div class="control">
+            <textarea class="textarea" placeholder="Answer here" name="questionThree"></textarea>
+          </div>
+        </div>
 
+        <div class="field">
+          <label class="label">What question would a teacher ask you about these pages</label>
+          <div class="control">
+            <textarea class="textarea" placeholder="Answer here" name="questionFour"></textarea>
+          </div>
+        </div>
 
-
+        <div class="file has-name is-boxed is-info">
+          <label class="file-label">
+            <input class="file-input" type="file" accept="image/*" name="picture">
+            <span class="file-cta">
+              <span class="file-icon">
+                <i class="fas fa-upload"></i>
+              </span>
+              <span class="file-label">
+                Choose a file…
+              </span>
+            </span>
+            <span class="file-name">
+              No file uploaded
+            </span>
+          </label>
+        </div>
+        <br>
+        <div class="field">
+          <div class="control">
+            <input class="button is-link" type="submit" value="Submit">
+          </div>
+        </div>
       </form>
     </div>
     <%- include ('../partials/footer.ejs') %>
