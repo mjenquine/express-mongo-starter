@@ -25,7 +25,11 @@ logs.get('/new', (req, res) => {
   res.render('logs/new.ejs', {currentUser: req.session.currentUser})
 })
 // SHOW
-
+logs.get('/:id', (req, res) => {
+  Log.findById(req.params.id, (error, foundLog) => {
+    res.render('logs/show.ejs', {log: foundLog, currentUser: req.session.currentUser})
+  })
+})
 // EDIT
 
 //// FUNCTIONAL ROUTES
