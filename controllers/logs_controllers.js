@@ -77,7 +77,7 @@ logs.post('/', (req, res) => {
     })
 })
 // UPDATE
-logs.put('/', (req, res) => {
+logs.put('/:id', (req, res) => {
   if (req.body.isHappy === 'on') {
       req.body.isHappy = true
     } else {
@@ -108,10 +108,11 @@ logs.put('/', (req, res) => {
     } else {
       req.body.isSuprise = false
     }
-    Log.create(req.body, (error, createdLog) => {
+    Log.findByIdAndUpdate(req.params.id, req.body, { new: true }, (error, updatedModel) => {
       res.redirect('/logs')
     })
 })
+
 // DELETE
 logs.delete('/:id', isAuthenticated, (req, res) => {
   Log.findByIdAndRemove(req.params.id, (err, deletedFruit) => {

@@ -48,12 +48,22 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-          <a href="/users/new" class="button is-link">
-            <strong>Sign up</strong>
-          </a>
-          <a href="/sessions/new" class="button is-light">
-            Log in
-          </a>
+
+          <% if (currentUser) { %>
+            <a href="#" class="button is-link"><strong>Welcome <%= currentUser.userName %></strong>
+            </a>
+            <form action="/sessions?_method=DELETE" method="POST">
+              <input type="submit" value="Log Out" class="button is-light" />
+            </form>
+          <% } else { %>
+            <a href="/users/new" class="button is-link">
+              <strong>Sign up</strong>
+            </a>
+            <a href="/sessions/new" class="button is-light">
+              Log in
+            </a>
+          <% } %>
+
         </div>
       </div>
     </div>
