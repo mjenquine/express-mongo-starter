@@ -46,7 +46,7 @@
         <div class="buttons">
 
           <% if (currentUser) { %>
-            <a href="#" class="button is-link"><strong>Welcome <%= currentUser.userName %></strong>
+            <a href="#" class="button is-link"><strong>Welcome <%= currentUser.username %></strong>
             </a>
             <form action="/sessions?_method=DELETE" method="POST">
               <input type="submit" value="Log Out" class="button is-light" />
@@ -65,3 +65,4 @@
     </div>
   </div>
 </nav>
+<br>
