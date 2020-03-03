@@ -9,7 +9,7 @@
           <div class="tile"
             <div class="tile is-parent">
               <article class="tile is-child notification is-info">
-                <h1 class="title is-size-1">
+                <h1 class="title is-size-1 is-capitalized">
                   Book: <%= log.title %>
                 </h1>
                 <h2 class="is-size-4">Reader: <%= log.readerName %></h2>
@@ -62,7 +62,7 @@
                   </figure>
                   <br>
                   <p class="title">Cover Art</p>
-                  <img id="p1" width="90%" src="" alt="book cover">
+                  <img class="has-text-centered" id="p1" width="75%" src="" alt="book cover">
                   <br>
                   <p class="title">How is <%= log.characterName%> feeling in these pages?</p>
                   <% if (log.isHappy === true) { %>

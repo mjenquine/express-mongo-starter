@@ -120,5 +120,100 @@ logs.delete('/:id', isAuthenticated, (req, res) => {
   })
 })
 
+// SEED ROUTE
+logs.get('/setup/seed', (req, res) => {
+  Log.create(
+    [
+      {
+      title: 'The Chocolate Touch',
+      readerName: 'Jade Smith',
+      pagesRead: '45 - 52',
+      characterName: 'John',
+      isHappy: false,
+      isSad: false,
+      isMad: false,
+      isFunny: false,
+      isLove: false,
+      isSuprise: true,
+      questionOne: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      questionTwo: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
+      questionThree: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident',
+      questionFour: 'Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur',
+      picture: '',
+      },
+      {
+      title: 'Return of the Mummy',
+      readerName: 'Carson Rodgers',
+      pagesRead: '7 - 17',
+      characterName: 'Gabe',
+      isHappy: true,
+      isSad: false,
+      isMad: false,
+      isFunny: false,
+      isLove: false,
+      isSuprise: false,
+      questionOne: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      questionTwo: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
+      questionThree: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident',
+      questionFour: 'Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur',
+      picture: '',
+      },
+      {
+      title: 'Danger in Quicksand Swamp',
+      readerName: 'Ben Sanders',
+      pagesRead: '78 to 85',
+      characterName: 'Ben',
+      isHappy: false,
+      isSad: true,
+      isMad: false,
+      isFunny: false,
+      isLove: false,
+      isSuprise: false,
+      questionOne: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      questionTwo: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
+      questionThree: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident',
+      questionFour: 'Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur',
+      picture: '',
+      },
+      {
+      title: 'Restart',
+      readerName: 'Addison Simmons',
+      pagesRead: '50 - 56',
+      characterName: 'Chase',
+      isHappy: false,
+      isSad: true,
+      isMad: false,
+      isFunny: false,
+      isLove: false,
+      isSuprise: false,
+      questionOne: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      questionTwo: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
+      questionThree: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident',
+      questionFour: 'Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur',
+      picture: '',
+      },
+      {
+      title: 'Stuart Little',
+      readerName: 'Eddy Bryant',
+      pagesRead: '37 - 45',
+      characterName: 'Stuart',
+      isHappy: false,
+      isSad: false,
+      isMad: false,
+      isFunny: false,
+      isLove: false,
+      isSuprise: true,
+      questionOne: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      questionTwo: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
+      questionThree: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident',
+      questionFour: 'Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur',
+      picture: '',
+      }
+    ],
+    (error, data) => {
+      res.redirect('/logs')
+    }
+  )
+})
 
 module.exports = logs
