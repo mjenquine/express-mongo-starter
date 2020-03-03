@@ -3,26 +3,28 @@
   <body>
     <%# nav partial %>
     <%- include ('../partials/nav.ejs') %>
-      <section class="hero is-info">
-        <div class="hero-body">
-          <div class="container">
-            <h1 class="title is-size-1">
-              Book: <%= log.title %>
-            </h1>
-            <h2 class="is-size-4">Reader: <%= log.readerName %></h2>
-            <h2 class="is-size-4">Pages: <%= log.pagesRead %></h2>
-            <h2 class="is-size-4">Character: <%= log.characterName %></h2>
-          </div>
-        </div>
-      </section>
       <br>
       <div class="container">
         <div class="tile is-ancestor">
+          <div class="tile"
+            <div class="tile is-parent">
+              <article class="tile is-child notification is-info">
+                <h1 class="title is-size-1">
+                  Book: <%= log.title %>
+                </h1>
+                <h2 class="is-size-4">Reader: <%= log.readerName %></h2>
+                <h2 class="is-size-4">Pages: <%= log.pagesRead %></h2>
+                <h2 class="is-size-4">Character: <%= log.characterName %></h2>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
 
-
+      <br>
+      <div class="container">
+        <div class="tile is-ancestor">
           <div class="tile">
-
-
             <div class="tile is-parent is-vertical">
               <article class="tile is-child notification is-info">
                 <div class="content">
@@ -39,13 +41,7 @@
                 </div>
               </article>
             </div>
-
           </div>
-
-
-
-
-
           <div class="tile is-vertical is-8">
             <div class="tile">
               <div class="tile is-parent is-vertical">
@@ -60,15 +56,48 @@
               </div>
               <div class="tile is-parent">
                 <article class="tile is-child notification is-info">
-                  <p class="title">Picture</p>
+                  <p class="title">Pictures</p>
                   <figure class="image is-4by3">
                     <img src="<%= log.picture %>">
                   </figure>
+                  <br>
+                  <p class="title">Cover Art</p>
+                  <img id="p1" width="90%" src="" alt="book cover">
+                  <br>
+                  <p class="title">How is <%= log.characterName%> feeling in these pages?</p>
+                  <% if (log.isHappy === true) { %>
+                    <p> <i class="far fa-smile fa-3x"></i> </p>
+                  <% } %>
+                  <% if (log.isSad === true) { %>
+                    <p> <i class="far fa-frown fa-3x"></i> </p>
+                  <% } %>
+                  <% if (log.isMad === true) { %>
+                    <p> <i class="far fa-angry fa-3x"></i> </p>
+                  <% } %>
+                  <% if (log.isFunny === true) { %>
+                    <p> <i class="far fa-grin-tongue-wink fa-3x"></i> </p>
+                  <% } %>
+                  <% if (log.isLove === true) { %>
+                    <p> <i class="far fa-grin-hearts fa-3x"></i> </p>
+                  <% } %>
+                  <% if (log.isSuprise === true) { %>
+                    <p> <i class="far fa-surprise fa-3x"></i> </p>
+                  <% } %>
                 </article>
+                <script>
+                  function handleResponse(response) {
+                  for (var i = 0; i < 1; i++) {
+                    var item = response.items[i];
+                    document.getElementById("p1").src = item.volumeInfo.imageLinks.thumbnail;
+                  }
+                }
+                </script>
+                <script src="https://www.googleapis.com/books/v1/volumes?q=<%=  log.title %>&callback=handleResponse"></script>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <br>
     <%- include ('../partials/footer.ejs') %>
   </body>

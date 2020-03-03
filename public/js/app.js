@@ -14,5 +14,16 @@ $(() => {
   });
 
 
+$.ajax ({
+  url: "https://www.googleapis.com/books/v1/volumes?q=flowers+intitle:keyes&key=AIzaSyCra6D8mmMShUgTWJ8w_s71UUDa5U1_-Xg",
+  type: "get"
+}).then(
+  (data) => {
+    console.log(data);
+  },
+  () => {
+    console.log('no data');
+  }
+)
 //////////////////////////////////////////////////////////////
 })
