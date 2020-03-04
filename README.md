@@ -2,7 +2,7 @@
 
 ---
 
-<https://mj-express-mongo-example.herokuapp.com/logs>
+[Student Reading Journal via Heroku](https://mj-express-mongo-example.herokuapp.com/logs)
 
 ---
 
